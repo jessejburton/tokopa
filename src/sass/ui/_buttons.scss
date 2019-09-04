@@ -1,0 +1,73 @@
+a.read-more-btn {
+  @include optimus;
+  line-height: 2rem;
+  font-size: 2rem;
+}
+
+.arrow a, a.read-more-btn, button.arrow {
+  position: relative;
+  display: inline;
+  transition: all .3s ease;
+
+  .elementor-button-text {
+    transition: all .3s ease;
+  }
+
+  &::after {
+    font-family: 'Elegant Icons';
+    display: inline;
+    position: absolute;
+    margin-top: -.1em;
+    font-size: $font-size-xlarge;
+    text-shadow: none;
+    content: "\39";
+    transition: all .3s ease;
+  }
+}
+
+a.read-more-btn:hover {
+  padding-right: 1rem;
+}
+
+.arrow:hover a, a.read-more-btn:hover {
+  transform: translateX(-.2rem);
+
+  .elementor-button-text {
+    padding-right: 1rem;
+  }
+
+  &::after {
+    transform: translateX(.2rem);
+  }
+}
+
+.arrow--button a, button.arrow--button {
+  &::after {
+    transform: translateX(-.5rem);
+    opacity: 0;
+    margin-top: -.15em;
+  }
+}
+
+.arrow--button:hover a, button.arrow--button:hover {
+  padding-right: 4rem;
+
+  &::after {
+    opacity: 1;
+  }
+}
+
+button.arrow--button {
+  padding: 1.5rem 2rem;
+  @include optimus;
+  font-size: 21px;
+  font-weight: bold;
+  color: #151511;
+  background-color: rgba(173,196,196,0.5);
+  border-radius: 3px 3px 3px 3px;
+  border: 5px solid rgba(179,158,107,0.51);
+
+  &::after {
+    margin-left: 1rem;
+  }
+}

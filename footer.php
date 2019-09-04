@@ -1,27 +1,25 @@
 
-<footer class="footer">
+<footer class="footer" data-aos="fade-up">
   <div class="footer__widgets">
 		<?php
-			if(is_active_sidebar('footer-sidebar-1')){
-				dynamic_sidebar('footer-sidebar-1');
+			if(is_active_sidebar('footer-1')){
+				dynamic_sidebar('footer-1');
 			}
-			if(is_active_sidebar('footer-sidebar-2')){
-				dynamic_sidebar('footer-sidebar-2');
+			if(is_active_sidebar('footer-2')){
+				dynamic_sidebar('footer-2');
 			}
-			if(is_active_sidebar('footer-sidebar-3')){
-				dynamic_sidebar('footer-sidebar-3');
+			if(is_active_sidebar('footer-3')){
+				dynamic_sidebar('footer-3');
 			}
-			if(is_active_sidebar('footer-sidebar-4')){
-				dynamic_sidebar('footer-sidebar-4');
+			if(is_active_sidebar('footer-4')){
+				dynamic_sidebar('footer-4');
 			}
     ?>
   </div>
   <div class="footer__brand">
-    <a href="portal/"><img class="footer__brand-image" src="<?php echo get_template_directory_uri() . '/dist/images/sscy_text_white.svg'; ?>" /></a>
+    <p>Toko-pa.com | Copyright &copy; <?php echo date("Y"); ?> | Designed by <a href="#">Andrea Palframan</a> | Theme Developed by <a href="#">BURTON<strong>MEDIA</strong></a></p>
   </div>
 </footer>
-
-<?php require_once('templates/modal.php'); ?>
 
 <?php wp_footer(); ?>
 

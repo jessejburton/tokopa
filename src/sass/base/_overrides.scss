@@ -1,0 +1,9 @@
+// Make sure the social media links are white
+.swp_social_panel a {
+  color: white!important;
+}
+
+// Hide the ReCaptcha Badge
+.grecaptcha-badge{
+	visibility: collapse !important;
+}

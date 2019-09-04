@@ -1,0 +1,58 @@
+.banner-book {
+  width: 100vw;
+  background: url(../images/book-header.jpg) no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+
+  &::after {
+    width: 100vw;
+    height: 80px;
+    content: '';
+    display: block;
+    background: url(../images/tealbar.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    bottom: -4rem;
+    z-index: 100;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .banner-content-top {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    justify-content: center;
+    padding-top: 8.5rem;
+  }
+
+  .banner-content-text {
+    display: flex;
+    width: 100vw;
+    padding: 5rem 0;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+
+    p {
+      max-width: 700px;
+    }
+  }
+
+  .book {
+    max-width: 300px;
+  }
+
+  .belonging {
+    max-width: 700px;
+  }
+
+  .book-text {
+    font-size: 3.2rem;
+    font-weight: bold;
+  }
+}

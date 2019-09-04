@@ -1,0 +1,115 @@
+.footer {
+  padding-top: 300px;
+  color: $color-yellow;
+  font-size: $font-size-medium;
+
+  a, a:link {
+    text-decoration: none;
+  }
+}
+
+.footer__widgets {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  background: url(../images/footer-bg.jpg) repeat-y;
+  padding-top: 5rem;
+  text-shadow: 2px 2px 2px #1F6E54;
+
+  h6 {
+    font-size: 3.4rem;
+    @include akadora;
+  }
+
+  p {
+    padding: 2rem 0;
+  }
+
+  &::before {
+    content: ' ';
+    height: 350px;
+    width: 100%;
+    background: url(../images/flower-bottom.png) no-repeat;
+    background-size: cover;
+    display: block;
+    position: absolute;
+    top: -295px;
+  }
+}
+
+.footer__widget {
+  padding: 4rem;
+
+  form {
+    margin: 0!important;
+    padding: 0!important;
+    width: auto!important;
+
+    ._form-thank-you {
+      color: #f0f0c2!important;
+      font-size: $font-size-medium;
+    }
+
+    input[type=text], button {
+      padding: .6rem!important;
+      font-size: $font-size-small!important;
+      background: #f0f0c2!important;
+      border: 1px solid #b39e6bc4!important;
+      border-radius: 5px!important;
+      color: #272828!important;
+      width: 100%;
+      margin-bottom: 2rem!important;
+    }
+
+    button {
+      font-size: $font-size-medium;
+      font-weight: bold;
+      background: darken(#f0f0c2, 10%)!important;
+      @include optimus;
+      transition: all .3s ease;
+
+      &:hover {
+        transform: scale(1.01);
+        box-shadow: 0 0 10px 10px rgba($color-black, .1);
+      }
+    }
+  }
+
+  @include below(529px){
+    width: 100%;
+  }
+}
+
+#footericons {
+  padding: 2rem 0;
+
+  // Hide any auto generated break tags.
+  br {
+    display: none;
+  }
+}
+
+a.footersocial {
+  display: inline-block;
+  position: relative;
+  font-size: 3rem;
+  margin-right: 11px;
+  transition: transform .3s ease;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.footer__brand {
+  background-color: #05352c;
+  width: 100%;
+  color: #d8dba0;
+  font-size: 1.2rem;
+  box-shadow: 0 10px 10px inset rgba($color-black, .8);
+
+  p {
+    padding: 2rem 3rem;
+  }
+}

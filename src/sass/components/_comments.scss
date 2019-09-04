@@ -1,0 +1,64 @@
+.comments {
+
+  h2 {
+    @include akadora;
+    font-weight: 400;
+    font-size: 3.3rem;
+    padding: 3rem 0;
+  }
+
+  ol {
+    list-style: none;
+  }
+
+  .comment {
+    display: flex;
+    flex: 1 1 100%;
+    padding: 3rem 0;
+  }
+
+  .comment-body, comment-reply {
+    margin-left: 3rem;
+  }
+
+  .comment-body {
+    width: 100%;
+
+    h3 a, h3 a.link {
+      text-decoration: none;
+      @include optimus;
+      font-size: $font-size-large;
+    }
+  }
+
+  .comment-avatar img {
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+  }
+
+  .comment-reply a, .comment-reply a:link {
+    @include optimus;
+    text-decoration: none;
+    font-size: 2rem;
+    position: relative;
+
+    &::after {
+      margin-top: -.7rem;
+    }
+
+  }
+
+  .comment-textarea {
+    width: 100%;
+    border-radius: 2px;
+    border: 2px solid rgba(179,158,107,0.51);
+    padding: 2rem;
+    outline: none;
+  }
+
+  .reply-header {
+    @include optimus;
+    font-size: 2.5rem;
+    margin-top: 5rem;
+  }
+}

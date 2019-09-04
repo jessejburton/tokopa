@@ -1,0 +1,20 @@
+.sidebar {
+
+  .widget-title {
+    font-size: $font-size-xlarge;
+    @include akadora;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  form {
+    padding: 0!important;
+    width: 100%!important;
+
+    button {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+}

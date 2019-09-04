@@ -1,0 +1,82 @@
+#blog-menu {
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    opacity: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+    @include optimus;
+    font-size: $font-size-large;
+    font-style: normal;
+    transition: all .3s ease;
+    position: relative;
+
+    &::after {
+      font-family: 'Elegant Icons';
+      display: inline;
+      margin-top: -.1em;
+      font-size: $font-size-xlarge;
+      content: "\33";
+    }
+  }
+}
+
+#blog-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+#blog-menu ul li {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+#blog-menu li:hover .sub-menu {
+  box-shadow: 0 9px 9px 0px rgba(0,0,0,.1)
+}
+
+#blog-menu li:hover .sub-menu li {
+  height: 50px;
+  opacity: 1;
+}
+
+#blog-menu li .sub-menu li {
+  overflow: hidden;
+  display: block;
+  perspective: 1000px;
+  top: 0;
+  height: 0;
+  opacity: 0;
+  transition: height .5s ease, opacity .3s ease;
+
+  a {
+    font-family: "Open sans"!important;
+    font-size: $font-size-small;
+
+    &:hover {
+      background-color: darken($color-white, 5%);
+    }
+
+    &::after {
+      content: '';
+    }
+  }
+}
+
+#blog-menu li .sub-menu li {
+  background-color: $color-white;
+}
+
+#blog-menu .sub-menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  z-index:4000;
+}

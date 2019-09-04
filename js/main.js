@@ -1,0 +1,17 @@
+console.log("Main JavaScript Loaded from file");
+
+AOS.init();
+
+// Wait for loading to complete before running css animations
+document.body.classList.add('js-loading');
+window.addEventListener("DOMContentLoaded", showPage);
+function showPage() {
+  document.body.classList.remove('js-loading');
+}
+
+function toggle() {
+  document.querySelector('.mobile-menu-button').classList.toggle('menu-open');
+  document.querySelector('.header__menu-container').classList.toggle('menu-open');
+}
+
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiIiwic291cmNlcyI6WyJtYWluLmpzIl0sInNvdXJjZXNDb250ZW50IjpbImNvbnNvbGUubG9nKFwiTWFpbiBKYXZhU2NyaXB0IExvYWRlZCBmcm9tIGZpbGVcIik7XHJcblxyXG5BT1MuaW5pdCgpO1xyXG5cclxuLy8gV2FpdCBmb3IgbG9hZGluZyB0byBjb21wbGV0ZSBiZWZvcmUgcnVubmluZyBjc3MgYW5pbWF0aW9uc1xyXG5kb2N1bWVudC5ib2R5LmNsYXNzTGlzdC5hZGQoJ2pzLWxvYWRpbmcnKTtcclxud2luZG93LmFkZEV2ZW50TGlzdGVuZXIoXCJET01Db250ZW50TG9hZGVkXCIsIHNob3dQYWdlKTtcclxuZnVuY3Rpb24gc2hvd1BhZ2UoKSB7XHJcbiAgZG9jdW1lbnQuYm9keS5jbGFzc0xpc3QucmVtb3ZlKCdqcy1sb2FkaW5nJyk7XHJcbn1cclxuXHJcbmZ1bmN0aW9uIHRvZ2dsZSgpIHtcclxuICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCcubW9iaWxlLW1lbnUtYnV0dG9uJykuY2xhc3NMaXN0LnRvZ2dsZSgnbWVudS1vcGVuJyk7XHJcbiAgZG9jdW1lbnQucXVlcnlTZWxlY3RvcignLmhlYWRlcl9fbWVudS1jb250YWluZXInKS5jbGFzc0xpc3QudG9nZ2xlKCdtZW51LW9wZW4nKTtcclxufVxyXG5cclxuIl0sImZpbGUiOiJtYWluLmpzIn0=

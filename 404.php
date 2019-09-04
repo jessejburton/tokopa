@@ -1,14 +1,18 @@
 <?php get_header(); ?>
-<div class="main">
-  <div class="content-container error-404 not-found" data-aos="fade-in" data-aos-duration="1000">
-    <header class="page-header">
-      <h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'twentynineteen' ); ?></h1>
-    </header><!-- .page-header -->
+  <div class="main">
+    <div class="content-container">
+      <div class="content">
 
-    <div class="page-content">
-      <p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'twentynineteen' ); ?></p>
-      <?php get_search_form(); ?>
-    </div><!-- .page-content -->
-  </div><!-- .error-404 -->
-</div>
+      <div class="banner-image">
+        <img src="/wp-content/themes/tokopa/images/blog-header-small.jpg" />
+      </div>
+
+      <div class="content page-content">
+        <h1>Oops! that page doesn't seem to exist.</h1>
+        <p>Return to the <a href="<?php echo get_home_url(); ?>">home page</a></p>
+      </div>
+
+      </div>
+    </div>
+  </div>
 <?php get_footer(); ?>
