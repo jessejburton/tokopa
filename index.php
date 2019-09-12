@@ -10,8 +10,19 @@
 
     <!-- Display Main Content -->
     <div class="content-with-sidebar">
+
       <!-- Post Content -->
       <div class="posts">
+        <!-- IF SEARCHING -->
+        <?php if(is_search()){ ?>
+        <div class="search__header">
+          <h1>
+            Search Result for <?php $allsearch = new WP_Query("s=$s&showposts=-1"); $key = wp_specialchars($s, 1); $count = $allsearch->post_count; _e(''); _e('<span class="search-terms">'); echo $key; _e('</span>'); _e(' &mdash; '); echo $count . ' '; _e('articles'); wp_reset_query(); ?></h1>
+        <?php } ?>
+          <?php get_search_form(); ?>
+        </div>
+
+        <!-- Content -->
         <?php
           if ( have_posts() ) : while ( have_posts() ) : the_post();
 
