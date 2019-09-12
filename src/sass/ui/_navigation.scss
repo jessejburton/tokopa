@@ -175,7 +175,8 @@
 /* MOBILE MENU STYLES */
 .mobile-menu-button {
   position: fixed;
-  right: 2rem;
+  top: 3rem;
+  right: 3rem;
   width: 5rem;
   height: 5rem;
   z-index: 5000;
@@ -184,6 +185,12 @@
   align-items: center;
   cursor: pointer;
   opacity: 0;
+<<<<<<< HEAD
+  pointer-events: none;
+  background-color: rgba(0,0,0,0.1);
+  border-radius: 50%;
+=======
+>>>>>>> dc4fa75a6870fd75491d84a71985097f0e9737be
 
   @include below($menu-breakpoint){
     opacity: 1;

@@ -13,7 +13,7 @@ body {
   color: $color-font;
   font-family: $font-opensans;
   font-size: $m-size;
-  line-height: 1.6;
+  line-height: 2.6rem;
   overflow-x: hidden;
 }
 
@@ -28,6 +28,8 @@ button {
 .is-active {
   font-weight: bold;
 }
+<<<<<<< HEAD
+=======
 * {
   box-sizing: border-box;
 }
@@ -42,21 +44,10 @@ body {
   font-size: $m-size;
   line-height: 1.6;
 }
+>>>>>>> dc4fa75a6870fd75491d84a71985097f0e9737be
 
 .content p {
   margin: 1.5rem 0;
-}
-
-button {
-  cursor: pointer;
-
-  &:disabled {
-    cursor: default;
-  }
-}
-
-.is-active {
-  font-weight: bold;
 }
 
 .banner-image {
@@ -78,11 +69,6 @@ a, a:link {
   .sidebar {
     padding: 5rem 5rem 5rem 2rem;
   }
-}
-
-/* Remove floting Social Warfare bar */
-.nc_wrapper.swp_floating_horizontal_wrapper.bottom {
-  display: none!important;
 }
 
 /* BLOG STYLES USED IN CONTENT */

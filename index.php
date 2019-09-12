@@ -13,6 +13,7 @@
 
       <!-- Post Content -->
       <div class="posts">
+<<<<<<< HEAD
         <!-- IF SEARCHING -->
         <?php if(is_search()){ ?>
         <div class="search__header">
@@ -23,6 +24,9 @@
         </div>
 
         <!-- Content -->
+=======
+
+>>>>>>> 3fd2df183e8ffea2bbcc09992cae85cb0b8e0e82
         <?php
           if ( have_posts() ) : while ( have_posts() ) : the_post();
 

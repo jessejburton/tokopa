@@ -3,11 +3,47 @@
   .widget-title {
     font-size: $font-size-xlarge;
     @include akadora;
-    font-weight: bold;
     text-align: center;
   }
 
-  form {
+  // Search Form
+  .searchform {
+
+    position: relative;
+
+    #s {
+      height: 40px!important;
+      margin: 0;
+      padding: .7em;
+      border: 1px solid #ddd;
+      color: #666;
+      font-size: 14px;
+      line-height: normal!important;
+      width: 100%;
+      border-radius: 3px;
+    }
+
+    #searchsubmit {
+      height: 40px!important;
+      margin: 0;
+      padding: .7em;
+      border: 1px solid #ddd;
+      color: #666;
+      font-size: 14px;
+      line-height: normal!important;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 70px;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+      background-color: #ddd;
+    }
+
+  }
+
+  // Signup Form
+  ._form_1 {
     padding: 0!important;
     width: 100%!important;
 
@@ -16,5 +52,28 @@
       text-align: center;
     }
   }
+
+  .widget-content {
+    padding: 2rem 0;
+  }
+
+  .menu-social-menu-container {
+    text-align: center;
+    padding: 2rem 0;
+
+    ul {
+      list-style: none;
+    }
+
+    li {
+      display: inline-block;
+    }
+
+    span {
+      display: none;
+    }
+  }
+
+
 
 }

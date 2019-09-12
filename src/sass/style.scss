@@ -16,6 +16,17 @@
        url("fonts/ElegantIcons.woff") format("woff");
 }
 
+<<<<<<< HEAD
+@font-face {
+  font-family: "Ellipse";
+  src: url("fonts/ELIPS.woff2") format("woff2"),
+       url("fonts/ELIPS.woff") format("woff");
+}
+
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+=======
+>>>>>>> dc4fa75a6870fd75491d84a71985097f0e9737be
 @import './abstracts/variables';
 @import './abstracts/animations';
 @import './abstracts/mixins';
