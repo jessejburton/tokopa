@@ -1,8 +1,3 @@
-// Only the homepage has an opaque background
-.home .header__menu-container {
-  background-color: rgba(39,73,82,0.5);
-}
-
 .header__menu-container {
   position: absolute;
   width: 100vw;
@@ -10,6 +5,7 @@
   display: flex;
   justify-content: flex-end;
   padding: 0 5rem;
+  background-color: rgba(39,73,82,0.5);
   z-index: 1000;
 
   @include below($menu-breakpoint){
@@ -20,9 +16,8 @@
     opacity: 0;
     height: 0;
     width: 100vw;
-    background-color: rgb(153, 141, 116)!important;
+    background-color: rgba(39,73,82,1);
     transition: all .3s ease;
-    pointer-events: none;
   }
 }
 
@@ -189,11 +184,9 @@
   align-items: center;
   cursor: pointer;
   opacity: 0;
-  pointer-events: none;
 
   @include below($menu-breakpoint){
     opacity: 1;
-    pointer-events: all;
   }
 
   // Hamburger Menu Toggle
@@ -238,7 +231,6 @@
 .header__menu-container.menu-open {
   opacity: 1;
   height: 100vh;
-  pointer-events: all;
 
   & ul li a {
     transform: scale(1) translateY(0px);

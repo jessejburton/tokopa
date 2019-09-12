@@ -40,8 +40,7 @@ body {
   color: $color-grey;
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-size: $m-size;
-  font-weight: 400;
-  line-height: 2.6rem;
+  line-height: 1.6;
 }
 
 .content p {
@@ -111,10 +110,3 @@ a, a:link {
 .lower {
   z-index: 0;
 }
-
-.page-content {
-  @include below(1180px){
-    padding: 0 50px;
-  }
-}
-

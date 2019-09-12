@@ -16,8 +16,6 @@
        url("fonts/ElegantIcons.woff") format("woff");
 }
 
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
-
 @import './abstracts/variables';
 @import './abstracts/animations';
 @import './abstracts/mixins';
@@ -33,9 +31,6 @@
 @import './components/posts';
 @import './components/sidebar';
 
-@import './ui/activecampaign';
-@import './ui/contactform';
 @import './ui/buttons';
 @import './ui/navigation';
 @import './ui/blogmenu';
-@import './ui/woocommerce';
