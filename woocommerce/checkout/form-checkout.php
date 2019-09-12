@@ -14,6 +14,11 @@
  * @author 		WooThemes
  * @package 	WooCommerce/Templates
  * @version     2.3.0
+ *
+ * TEMPLATE REASON:
+ * Default checkout template does not provide the ability to remove items.
+ *
+ *
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

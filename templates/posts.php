@@ -1,5 +1,5 @@
 
-<div <?php post_class($addClass); ?> id="post-<?php the_ID(); ?>" data-aos="fade-in">
+<div id="post-<?php the_ID(); ?>" data-aos="fade-in">
 
   <!-- Display Post Thumbnail -->
   <div class="post__thumbnail">

@@ -6,6 +6,10 @@
   font-family: $font-akadora!important;
 }
 
+.ellipse {
+  font-family: $font-ellipse!important;
+}
+
 .content {
   a, a:link {
     color: darken(#E0F0EE, 50%);
@@ -26,6 +30,10 @@
     strong {
       color: #00808C;
     }
+  }
+
+  .text-shadow {
+    text-shadow: 0.08em 0.08em 0.08em rgba(0,0,0,0.4);
   }
 }
 

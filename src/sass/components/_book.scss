@@ -28,6 +28,10 @@
     width: 100vw;
     justify-content: center;
     padding-top: 8.5rem;
+
+    @include below(1100px){
+      flex-direction: column;
+    }
   }
 
   .banner-content-text {

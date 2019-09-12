@@ -180,7 +180,8 @@
 /* MOBILE MENU STYLES */
 .mobile-menu-button {
   position: fixed;
-  right: 2rem;
+  top: 3rem;
+  right: 3rem;
   width: 5rem;
   height: 5rem;
   z-index: 5000;
@@ -190,6 +191,8 @@
   cursor: pointer;
   opacity: 0;
   pointer-events: none;
+  background-color: rgba(0,0,0,0.1);
+  border-radius: 50%;
 
   @include below($menu-breakpoint){
     opacity: 1;

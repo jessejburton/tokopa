@@ -7,3 +7,8 @@
 .grecaptcha-badge{
 	visibility: collapse !important;
 }
+
+/* Remove floting Social Warfare bar */
+.nc_wrapper.swp_floating_horizontal_wrapper.bottom {
+  display: none!important;
+}
