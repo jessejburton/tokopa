@@ -16,6 +16,7 @@
        url("fonts/ElegantIcons.woff") format("woff");
 }
 
+<<<<<<< HEAD
 @font-face {
   font-family: "Ellipse";
   src: url("fonts/ELIPS.woff2") format("woff2"),
@@ -24,6 +25,8 @@
 
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
+=======
+>>>>>>> dc4fa75a6870fd75491d84a71985097f0e9737be
 @import './abstracts/variables';
 @import './abstracts/animations';
 @import './abstracts/mixins';
@@ -39,9 +42,6 @@
 @import './components/posts';
 @import './components/sidebar';
 
-@import './ui/activecampaign';
-@import './ui/contactform';
 @import './ui/buttons';
 @import './ui/navigation';
 @import './ui/blogmenu';
-@import './ui/woocommerce';

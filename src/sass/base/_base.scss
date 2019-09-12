@@ -28,6 +28,23 @@ button {
 .is-active {
   font-weight: bold;
 }
+<<<<<<< HEAD
+=======
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: $color-grey;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-size: $m-size;
+  line-height: 1.6;
+}
+>>>>>>> dc4fa75a6870fd75491d84a71985097f0e9737be
 
 .content p {
   margin: 1.5rem 0;
@@ -79,10 +96,3 @@ a, a:link {
 .lower {
   z-index: 0;
 }
-
-.page-content {
-  @include below(1180px){
-    padding: 0 50px;
-  }
-}
-

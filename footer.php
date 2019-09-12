@@ -17,7 +17,7 @@
     ?>
   </div>
   <div class="footer__brand">
-    <p>Toko-pa.com | Copyright &copy; <?php echo date("Y"); ?> | Designed by <a href="#">Andrea Palframan</a> | Theme Developed by <a href="#">BURTON<strong>MEDIA</strong></a></p>
+    <p>Toko-pa.com | Copyright &copy; <?php echo date("Y"); ?> | Designed by <a href="#">Andrea Palframan</a> | Developed by <a href="#">BURTON<strong>MEDIA</strong></a></p>
   </div>
 </footer>
 

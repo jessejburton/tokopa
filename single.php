@@ -32,6 +32,7 @@
 
       <!-- Sidebar Content -->
       <div class="sidebar">
+          <h1>HERE</h1>
           <?php dynamic_sidebar('tokopa-side-bar'); ?>
       </div><!-- .sidebar -->
     </div><!-- .content-with-sidebar -->
