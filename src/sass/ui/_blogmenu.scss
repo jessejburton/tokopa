@@ -20,6 +20,11 @@
       margin-top: -.1em;
       font-size: $font-size-xlarge;
       content: "\33";
+
+      @include below(990px){
+        display: none;
+      }
+
     }
   }
 }
@@ -29,6 +34,14 @@
   padding: 0;
   margin: 0;
   display: flex;
+
+  @include below(990px){
+    padding-bottom: $l-size;
+  }
+
+  @include below(800px){
+    flex-direction: column;
+  }
 }
 
 #blog-menu ul li {
@@ -38,7 +51,11 @@
 }
 
 #blog-menu li:hover .sub-menu {
-  box-shadow: 0 9px 9px 0px rgba(0,0,0,.1)
+  box-shadow: 0 9px 9px 0px rgba(0,0,0,.1);
+
+  @include below(990px){
+    box-shadow: none;
+  }
 }
 
 #blog-menu li:hover .sub-menu li {
@@ -54,6 +71,11 @@
   height: 0;
   opacity: 0;
   transition: height .5s ease, opacity .3s ease;
+
+  @include below(990px){
+    height: auto;
+    opacity: 1;
+  }
 
   a {
     font-family: "Open sans"!important;
@@ -79,4 +101,8 @@
   flex-direction: column;
   width: 100%;
   z-index:4000;
+
+  @include below(990px){
+    position: relative;
+  }
 }

@@ -1,0 +1,97 @@
+.product {
+  padding-top: 5rem;
+
+  h1 {
+    margin: 0;
+  }
+
+  button[type=submit].single_add_to_cart_button {
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+    fill: #006666;
+    color: #006666;
+    background-color: rgba(0,102,102,0);
+    border-style: solid;
+    border-width: 3px 3px 3px 3px;
+    border-color: #006666;
+    padding: 12px 24px;
+    border-radius: 3px;
+    transition: all .3s ease;
+
+    &::after {
+      font-family: 'Elegant Icons';
+      display: inline;
+      position: absolute;
+      margin-top: -.1em;
+      font-size: 2.8rem;
+      text-shadow: none;
+      content: "\39";
+      transition: all .3s ease;
+      opacity: 0;
+    }
+
+    &:hover {
+      padding-right: 3.4rem;
+      background-color: $color-white!important;
+      color: #006666!important;
+    }
+
+    &:hover::after {
+      opacity: 1;
+      transform: translateX(.2rem);
+      background-color: $color-white!important;
+    }
+  }
+
+  .quantity input {
+    padding: 1.5rem;
+    background-color: #999999;
+    border-radius: 5px;
+    border: none;
+    color: $color-white;
+    text-align: center;
+  }
+
+  .price {
+    font-size: 26px!important;
+    color: #006666!important;
+  }
+
+  .productinfo-show-discounts {
+    font-style: italic;
+    font-size: $font-size-small;
+  }
+}
+
+/* CHECKOUT */
+#customer_details {
+
+  padding-bottom: 5rem;
+
+  input[type=text],
+  input[type=email],
+  input[type=tel],
+  textarea {
+    padding: 15px;
+    border-radius: 3px;
+    font-size: 14px;
+    border: 1px solid #bbb;
+    color: #4e4e4e;
+  }
+
+}
+
+.woocommerce-info {
+  border: none;
+  background-color: #006666;
+  color: $color-white;
+
+  a, a:link {
+    color: inherit;
+  }
+
+  &::before {
+    color: $color-white;
+  }
+}

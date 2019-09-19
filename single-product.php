@@ -3,21 +3,24 @@
   <div class="content-container">
     <div class="content">
 
-      <div class="banner-image">
-        <img src="/wp-content/themes/tokopa/images/blog-header-small.jpg" />
-      </div>
+    <!-- Display Header Image -->
+    <div class="banner-image">
+      <img src="<?php bloginfo('stylesheet_directory');?>/images/blog-header-small.jpg" />
+    </div>
 
-      <div class="woocommerce">
+    <!-- Display Main Content -->
+    <div class="content page-content">
+      <!-- Post Content -->
+      <div class="posts">
         <?php
           if ( have_posts() ) : while ( have_posts() ) : the_post();
 
-            get_template_part( 'templates/product', get_post_format() );
+          get_template_part( 'templates/product', get_post_format() );
 
           endwhile; endif;
         ?>
-      </div>
 
-    </div>
-  </div>
-</div>
+    </div><!-- .content -->
+  </div><!-- .content-container -->
+</div><!-- .main -->
 <?php get_footer(); ?>

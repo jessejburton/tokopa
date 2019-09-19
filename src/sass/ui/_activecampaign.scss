@@ -6,10 +6,10 @@
 .home_signup_container {
   position: relative;
   background: url('/wp-content/themes/tokopa/images/brownbar.png') no-repeat;
-  margin-top: -160px;
+  margin-top: -175px;
   width: 100vw;
 
-  @include below(900px){
+  @include below(990px){
     margin-top: 0;
     background: none;
   }
@@ -19,11 +19,11 @@
   display: flex;
   max-width: 1100px;
   margin: 0 auto;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 25px;
 
-  @include below(900px){
+  @include below(990px){
     flex-direction: column;
   }
 }
@@ -31,6 +31,7 @@
 .home_signup_text {
   @include optimus;
   font-weight: 700;
+  font-size: 20px;
 }
 
 .home_signup_form {

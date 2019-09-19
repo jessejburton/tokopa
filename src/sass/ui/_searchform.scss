@@ -1,0 +1,46 @@
+  // Search Form
+  .searchform {
+
+    position: relative;
+
+    #s {
+      height: 40px!important;
+      margin: 0;
+      padding: .7em;
+      border: 1px solid #ddd;
+      color: #666;
+      font-size: 14px;
+      line-height: normal!important;
+      width: 100%;
+      border-radius: 3px;
+    }
+
+    #searchsubmit {
+      height: 40px!important;
+      margin: 0;
+      padding: .7em;
+      border: 1px solid #ddd;
+      color: #666;
+      font-size: 14px;
+      line-height: normal!important;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 70px;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+      background-color: #ddd;
+    }
+  }
+
+.search__header {
+    h1 {
+    padding-top: 2.5rem;
+    font-weight: 300;
+    font-family: $font-akadora;
+
+    span {
+      font-weight: 600;
+    }
+  }
+}

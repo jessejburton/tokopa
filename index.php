@@ -13,20 +13,17 @@
 
       <!-- Post Content -->
       <div class="posts">
-<<<<<<< HEAD
         <!-- IF SEARCHING -->
         <?php if(is_search()){ ?>
         <div class="search__header">
+          <div class="searchform"><?php get_search_form(); ?></div>
           <h1>
-            Search Result for <?php $allsearch = new WP_Query("s=$s&showposts=-1"); $key = wp_specialchars($s, 1); $count = $allsearch->post_count; _e(''); _e('<span class="search-terms">'); echo $key; _e('</span>'); _e(' &mdash; '); echo $count . ' '; _e('articles'); wp_reset_query(); ?></h1>
-        <?php } ?>
-          <?php get_search_form(); ?>
+            Search Result for <?php $allsearch = new WP_Query("s=$s&showposts=-1"); $key = wp_specialchars($s, 1); $count = $allsearch->post_count; _e(''); _e('<span class="search-terms">'); echo $key; _e('</span>'); _e(' &mdash; '); echo $count . ' '; _e('articles'); wp_reset_query(); ?>
+          </h1>
         </div>
+        <?php } ?>
 
         <!-- Content -->
-=======
-
->>>>>>> 3fd2df183e8ffea2bbcc09992cae85cb0b8e0e82
         <?php
           if ( have_posts() ) : while ( have_posts() ) : the_post();
 

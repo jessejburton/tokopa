@@ -1,0 +1,73 @@
+.contactform {
+
+  input[type=text], textarea, input[type=email] {
+    padding: 1rem 2rem;
+    border: 1px solid $color-grey;
+    width: 50%;
+    margin: 1rem 0;
+
+    @include below(700px){
+      width: 100%;
+    }
+  }
+
+  span {
+    display: block;
+    font-size: $font-size-small;
+  }
+
+}
+
+.wpcf7-response-output {
+  padding: 1rem 2rem!important;
+  margin: 0!important;
+}
+
+.wpcf7-validation-errors {
+  border-color: #B00020!important;
+  background-color: #fcc2df;
+}
+
+.wpcf7-validation-success,
+.wpcf7-mail-sent-ok {
+  border-color: #69BB6D!important;
+  background-color: #acd2b7;
+}
+
+.wpcf7-not-valid-tip {
+  color: #B00020!important;
+
+  &::before {
+    content: '* ';
+  }
+}
+
+.wpcf7-submit {
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+    fill: #006666;
+    color: #006666;
+    background-color: rgba(0,102,102,0);
+    border-style: solid;
+    border-width: 3px 3px 3px 3px;
+    border-color: #006666;
+    padding: 12px 24px;
+    border-radius: 3px;
+
+    &::after {
+      font-family: 'Elegant Icons';
+      display: inline;
+      position: absolute;
+      margin-top: -.1em;
+      font-size: 2.8rem;
+      text-shadow: none;
+      content: "\39";
+      transition: all .3s ease;
+    }
+
+    &:hover::after {
+      opacity: 1;
+      transform: translateX(.2rem);
+    }
+}

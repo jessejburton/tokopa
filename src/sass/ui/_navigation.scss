@@ -1,3 +1,7 @@
+.home .header__menu-container {
+  background-color: rgba(39,73,82,0.5);
+}
+
 .header__menu-container {
   position: absolute;
   width: 100vw;
@@ -5,7 +9,6 @@
   display: flex;
   justify-content: flex-end;
   padding: 0 5rem;
-  background-color: rgba(39,73,82,0.5);
   z-index: 1000;
 
   @include below($menu-breakpoint){
@@ -185,12 +188,9 @@
   align-items: center;
   cursor: pointer;
   opacity: 0;
-<<<<<<< HEAD
   pointer-events: none;
   background-color: rgba(0,0,0,0.1);
   border-radius: 50%;
-=======
->>>>>>> dc4fa75a6870fd75491d84a71985097f0e9737be
 
   @include below($menu-breakpoint){
     opacity: 1;

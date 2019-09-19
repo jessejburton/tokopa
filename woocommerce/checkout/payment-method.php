@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 $location = WC_Geolocation::geolocate_ip();
 $country = $location['country'];
 
-// Determines the selected country based on customer address not GeoLocation
+/* Determines the selected country based on customer address not GeoLocation*/
 global $woocommerce;
 $customer_country = $woocommerce->customer->get_country();
 

@@ -1,3 +1,4 @@
 <div class="content page-content product">
-  <?php the_content(); ?>
+  <h1 class="optimus"><?php the_title() ?></h1>
+  <?php the_content() ?>
 </div><!-- /.blog-post -->
