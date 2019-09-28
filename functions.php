@@ -28,7 +28,7 @@ function custom_theme_setup(){
 	register_nav_menus( array(
     'primary-menu' => __( 'Primary Menu' ),
     'social-menu' => __( 'Social Menu' )
-	) );
+  ) );
 
   /* WIDGETS */
   // First Footer Widget
@@ -99,7 +99,7 @@ add_action( 'after_setup_theme', 'custom_theme_setup' );
 // Javascript
 function register_theme_js() {
   // Register
-  wp_register_script('aos', get_template_directory_uri() . '/node_modules/aos/dist/aos.js', array(), '1.0', true);
+  wp_register_script('aos', get_template_directory_uri() . '/js/aos.js', array(), '1.0', true);
   wp_register_script('theme_javascript', get_template_directory_uri() . '/js/main.js', array(), '1.0', true);
 
   // Enqueue
@@ -111,9 +111,9 @@ add_action( 'init', 'register_theme_js' );
 
 // CSS
 function register_theme_css() {
-    wp_register_style( 'normalize', get_template_directory_uri() . '/node_modules/normalize.css/normalize.css' );
-    wp_register_style( 'aos', get_template_directory_uri() . '/node_modules/aos/dist/aos.css' );
-    wp_register_style( 'tokopa_styles', get_template_directory_uri() . '/css/style.css?v1.0' );
+    wp_register_style( 'normalize', get_template_directory_uri() . '/css/normalize.css' );
+    wp_register_style( 'aos', get_template_directory_uri() . '/css/aos.css' );
+    wp_register_style( 'tokopa_styles', get_template_directory_uri() . '/css/style.css?v2.0' );
 
     // Enqueue
     wp_enqueue_style( 'normalize' );
@@ -131,6 +131,12 @@ function show_categories($arr){
     }
   }
 }
+
+/* DON't AUTO EMPTY TRASH (to use as an archive) */
+function tokopa_remove_schedule_delete() {
+  remove_action( 'wp_scheduled_delete', 'wp_scheduled_delete' );
+}
+add_action( 'init', 'tokopa_remove_schedule_delete' );
 
 /* WOO COMMERCE */
 
