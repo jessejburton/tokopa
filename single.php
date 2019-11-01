@@ -2,7 +2,6 @@
 <div class="main">
   <div class="content-container">
     <div class="content">
-
     <!-- Display Header Image -->
     <div class="banner-image">
       <img src="<?php bloginfo('stylesheet_directory');?>/images/blog-header-small.jpg" />

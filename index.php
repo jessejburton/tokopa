@@ -2,7 +2,7 @@
 <div class="main">
   <div class="content-container">
     <div class="content">
-
+<h1>INDEX</h1><?php die(); ?>
     <!-- Display Header Image -->
     <div class="banner-image">
       <img src="<?php bloginfo('stylesheet_directory');?>/images/blog-header.jpg" />
@@ -10,20 +10,8 @@
 
     <!-- Display Main Content -->
     <div class="content-with-sidebar">
-
       <!-- Post Content -->
       <div class="posts">
-        <!-- IF SEARCHING -->
-        <?php if(is_search()){ ?>
-        <div class="search__header">
-          <div class="searchform"><?php get_search_form(); ?></div>
-          <h1>
-            Search Result for <?php $allsearch = new WP_Query("s=$s&showposts=-1"); $key = wp_specialchars($s, 1); $count = $allsearch->post_count; _e(''); _e('<span class="search-terms">'); echo $key; _e('</span>'); _e(' &mdash; '); echo $count . ' '; _e('articles'); wp_reset_query(); ?>
-          </h1>
-        </div>
-        <?php } ?>
-
-        <!-- Content -->
         <?php
           if ( have_posts() ) : while ( have_posts() ) : the_post();
 
