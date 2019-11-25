@@ -1,0 +1,35 @@
+.signup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 207px;
+  background: url('../images/brownbar.png') no-repeat;
+  background-size: cover;
+  background-position: center;
+  transform: translateY(-62px);
+}
+
+.signup__text {
+  font-size: 2rem;
+  font-weight: 700;
+  padding-right: 15rem;
+}
+
+.signup__form {
+
+  form {
+    margin: 0;
+
+    label {
+      display: none!important;
+    }
+
+    ._button-wrapper {
+      margin-top: 0!important;
+    }
+  }
+
+
+
+}

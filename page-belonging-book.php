@@ -1,3 +1,10 @@
+<?php
+/*
+ * Template Name: Belonging Book
+ * description: Belonging book template
+*/
+?>
+
 <?php get_header('clear'); ?>
 <div class="main">
   <div class="content-container">

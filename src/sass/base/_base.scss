@@ -17,6 +17,10 @@ body {
   overflow-x: hidden;
 }
 
+body.js-loading * {
+  display: none;
+}
+
 button {
   cursor: pointer;
 

@@ -47,6 +47,7 @@
     @include optimus;
     font-weight: 500;
     font-size: $font-size-small;
+    letter-spacing: 2px;
     font-style: normal;
     transition: all .3s ease;
     position: relative;
@@ -61,7 +62,8 @@
       position: absolute;
       bottom: 0;
       height: 0;
-      width: 0;
+      left: 0;
+      width: 100%;
       background-color: $color-white;
       transition: all .3s ease;
     }
@@ -96,7 +98,6 @@
 
   &::after {
     height: 4px;
-    width: 100%;
   }
 }
 
@@ -165,11 +166,16 @@
   width: 100%;
   z-index:4000;
 
+  li {
+    padding: 0;
+  }
+
   @include below($menu-breakpoint){
     position: relative;
 
     li {
       opacity: 1!important;
+      padding: 0;
     }
   }
 }

@@ -10,7 +10,7 @@
     <?php wp_head(); ?>
 
   </head>
-  <body <?php body_class(); ?>>
+  <body <?php body_class('js-loading'); ?>>
 
   <header class="header">
     <div class="header__menu-container">

@@ -1,3 +1,25 @@
+.banner {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.banner--home {
+  background: url('../images/home--banner.jpg') no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.banner__logo {
+  width: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(50px, 100px);
+  opacity: 1;
+}
+
+/* OLD */
 .banner-image {
   background-color: $color-white;
 }
