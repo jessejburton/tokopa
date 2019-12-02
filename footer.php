@@ -1,5 +1,5 @@
 
-<footer class="footer" data-aos="fade-up">
+<footer class="footer">
   <div class="footer__widgets">
 		<?php
 			if(is_active_sidebar('footer-1')){

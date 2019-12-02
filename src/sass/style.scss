@@ -22,7 +22,7 @@
        url("fonts/ELIPS.woff") format("woff");
 }
 
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&display=swap');
 
 @import './abstracts/variables';
 @import './abstracts/animations';
@@ -42,7 +42,7 @@
 
 @import './pages/home';
 
-@import './ui/activecampaign'; 
+@import './ui/activecampaign';
 @import './ui/buttons';
 @import './ui/navigation';
 @import './ui/blogmenu';

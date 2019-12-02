@@ -14,12 +14,54 @@
     transition: all .3s ease;
     position: relative;
 
+    &:hover {
+
+      &::before {
+        transform: translateY(-3.5rem);
+        opacity: 1;
+      }
+
+      &::after {
+        animation: bounce .3s ease;
+      }
+
+      @keyframes bounce {
+        0% {
+          transform: translate(1rem, -0.2rem) scale(1);
+        }
+        85% {
+          transform: translate(1rem, 0rem) scale(0.9);
+        }
+        95% {
+          transform: translate(1rem, -0.2rem) scale(1.1);
+        }
+        100% {
+          transform: translate(1rem, -0.2rem) scale(1);
+        }
+      }
+
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 7rem;
+      height: 2.5rem;
+      background: url('../images/leaf.png') no-repeat;
+      background-size: cover;
+      transform: translateY(-1rem);
+      opacity: 0;
+      transition: all .3s ease;
+    }
+
     &::after {
-      font-family: 'Elegant Icons';
-      display: inline;
-      margin-top: -.1em;
-      font-size: $font-size-xlarge;
-      content: "\33";
+      font-family: 'FontAwesome';
+      position: relative;
+      display: inline-block;
+      transform: translate(1rem, -0.2rem);
+      font-size: 3rem;
+      content: "\f107";
+
 
       @include below(990px){
         display: none;
@@ -85,8 +127,9 @@
       background-color: darken($color-white, 5%);
     }
 
-    &::after {
-      content: '';
+    &::after,
+    &::before {
+      display: none;
     }
   }
 }

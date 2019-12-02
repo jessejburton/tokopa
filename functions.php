@@ -27,7 +27,8 @@ function custom_theme_setup(){
 	// Add another menu to the array to add more menus to this theme
 	register_nav_menus( array(
     'primary-menu' => __( 'Primary Menu' ),
-    'social-menu' => __( 'Social Menu' )
+    'social-menu' => __( 'Social Menu' ),
+    'home-blog-menu' => __( 'Home Page Blog Menu' )
   ) );
 
   /* WIDGETS */
@@ -99,14 +100,26 @@ add_action( 'after_setup_theme', 'custom_theme_setup' );
 // Javascript
 function register_theme_js() {
   // Register
-  wp_register_script('aos', get_template_directory_uri() . '/js/aos.js', array(), '1.0', true);
-  wp_register_script('GSAP', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js', array(), '2.1.3', true);
+  wp_register_script('TweenMax', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js', array(), '2.1.3', true);
+  wp_register_script('TimeLine', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js', array(), '2.1.3', true);
+
+  wp_register_script('ScrollMagic', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js', array(), '2.0.7', true);
+  wp_register_script('ScrollMagicGSAP', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js', array(), '2.0.7', true);
+  wp_register_script('ScrollMagic', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js', array(), '2.0.7', true);
+
+  /* DEBUG */
+  wp_register_script('ScrollMagicDebug', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js', array(), '2.0.7', true);
+
   wp_register_script('theme_javascript', get_template_directory_uri() . '/js/main.js', array(), '1.0', true);
 
   // Enqueue
+  wp_enqueue_script('TweenMax');
+  wp_enqueue_script('TimeLine');
+  wp_enqueue_script('ScrollMagic');
+  wp_enqueue_script('ScrollMagicGSAP');
+  wp_enqueue_script('ScrollMagicDebug');
   wp_enqueue_script('aos');
   wp_enqueue_script('theme_javascript');
-  wp_enqueue_script('GSAP');
 
 }
 add_action( 'init', 'register_theme_js' );
@@ -114,12 +127,10 @@ add_action( 'init', 'register_theme_js' );
 // CSS
 function register_theme_css() {
     wp_register_style( 'normalize', get_template_directory_uri() . '/css/normalize.css' );
-    wp_register_style( 'aos', get_template_directory_uri() . '/css/aos.css' );
     wp_register_style( 'tokopa_styles', get_template_directory_uri() . '/css/style.css?v2.0' );
 
     // Enqueue
     wp_enqueue_style( 'normalize' );
-    wp_enqueue_style( 'aos' );
     wp_enqueue_style( 'tokopa_styles' );
 
 }
@@ -148,3 +159,24 @@ function woo_custom_single_add_to_cart_text() {
 }
 add_filter( 'add_to_cart_text', 'woo_custom_single_add_to_cart_text' );
 add_filter( 'woocommerce_product_single_add_to_cart_text', 'woo_custom_single_add_to_cart_text' );
+
+
+// RETURN FEATURED IMAGE WITH REST API
+add_action('rest_api_init', 'register_rest_images' );
+function register_rest_images(){
+    register_rest_field( array('post','cards'),
+        'fimg_url',
+        array(
+            'get_callback'    => 'get_rest_featured_image',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
+}
+function get_rest_featured_image( $object, $field_name, $request ) {
+    if( $object['featured_media'] ){
+        $img = wp_get_attachment_image_src( $object['featured_media'], 'app-thumb' );
+        return $img[0];
+    }
+    return false;
+}

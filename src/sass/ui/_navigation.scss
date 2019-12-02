@@ -5,9 +5,10 @@
 .header__menu-container {
   position: absolute;
   width: 100vw;
-  height: 5rem;
+  height: $navigation-height;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   padding: 0 5rem;
   z-index: 1000;
 
@@ -40,7 +41,7 @@
     align-items: center;
     justify-content: center;
     color: $color-white;
-    height: 50px;
+    height: $navigation-height;
     opacity: 1;
     text-decoration: none;
     text-transform: uppercase;
@@ -137,7 +138,7 @@
 }
 
 .header__menu-container>div li:hover .sub-menu li {
-  height: 50px;
+  height: $navigation-height;
   width: 17rem;
   opacity: 1;
 }

@@ -97,3 +97,98 @@ a, a:link {
 .lower {
   z-index: 0;
 }
+
+/* OPTIMIZED */
+.content-container {
+  max-width: 120rem;
+  margin: 0 auto;
+
+  p a,
+  p a:link {
+    text-decoration: none;
+    color: #006666;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      left: 0;
+      bottom: 2px;
+      opacity: 0;
+      height: 1px;
+      background-color: #006666;
+      transition: all .3s ease;
+    }
+
+    &:hover::after {
+      opacity: 0.8;
+    }
+  }
+}
+
+a.arrow-link,
+a:link.arrow-link,
+button.arrow-link {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #006666;
+  text-decoration: none;
+  transition: all .3s ease;
+  display: inline-block;
+  position: relative;
+
+  &::after {
+    content: '\f105\f105';
+    padding-left: 1rem;
+    font-family: 'FontAwesome';
+    display: inline-block;
+    position: relative;
+    transition: all .3s ease;
+  }
+
+  &:hover {
+    transform: translateX(-0.25rem);
+  }
+  &:hover::after {
+    transform: translateX(0.5rem);
+  }
+}
+
+.button {
+  padding: 1rem 2rem;
+}
+.button--2 {
+  background-color: rgba(173,196,196,0.5);
+  border: 5px solid rgba(179,158,107,0.51);
+  border-radius: 1rem;
+  @include optimus;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 600;
+  position: relative;
+  transition: all .3s ease;
+
+  &::after {
+    content: '\f105';
+    padding-left: 2rem;
+    font-family: 'FontAwesome';
+    font-size: 2.4rem;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    display: block;
+    transform: translate(-50%, -60%);
+    opacity: 0;
+    transition: all .3s ease;
+  }
+
+  &:hover {
+    padding-right: 3rem;
+  }
+  &:hover::after {
+    transform: translate(-40%, -60%);
+    opacity: 1;
+  }
+}
