@@ -1,0 +1,247 @@
+.book-page {
+  .content-container {
+    max-width: 140rem;
+  }
+
+  // About Section
+  .about {
+    padding: 12rem 0 8rem 0;
+    background: url('../images/tealbar.png') no-repeat;
+    background-size: 100%;
+    background-color: #E0F0EE;
+    background-position: 0 -20px;
+
+    &__top {
+      display: grid;
+      grid-template-columns: 50% auto;
+      column-gap: 6rem;
+
+      .video {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 -> 9/16x100 */
+        overflow: hidden;
+      }
+
+      iframe {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      h2 {
+        margin-bottom: 2rem;
+      }
+    }
+
+    &__bottom {
+      padding-top: 4rem;
+    }
+
+    p {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+      font-style: italic;
+
+      strong {
+        font-style: normal;
+      }
+    }
+  }
+
+  // On Belonging Section
+  .on-belonging {
+    padding: 7rem 0;
+
+    .content-container {
+      display: grid;
+      grid-template-columns: auto 350px;
+      column-gap: 5rem;
+    }
+
+    h2 {
+      @include optimus;
+      font-size: 2.9rem;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+      font-weight: 500;
+      line-height: 2.4rem;
+    }
+
+    blockquote {
+      font-family: "Andada";
+      font-size: 2.4rem;
+      font-weight: 400;
+      font-style: italic;
+      margin: 3rem 0;
+      letter-spacing: 1px;
+    }
+
+    .button-container {
+      padding: 3rem 0;
+    }
+
+    .sidebar {
+      img {
+        width: 100%;
+      }
+      h3 {
+        @include optimus;
+        margin-bottom: 2rem;
+        text-align: center;
+        font-size: 2.4rem;
+      }
+      p {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        margin-bottom: 1rem;
+      }
+      .social-links {
+        font-size: 2.6rem;
+        padding-top: 2rem;
+
+        a, a:link {
+          margin-right: 1rem;
+          transition: all .3s ease;
+          display: inline-block;
+        }
+
+        a:hover {
+          transform: scale(1.1);
+
+          // Override for faded underline
+          &::after {
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+
+  // RETAILERS SECTION
+  .retailers {
+    h3 {
+      padding-top: 3rem;
+      margin-bottom: 2rem;
+      @include optimus;
+      font-size: 3rem;
+    }
+    p {
+      letter-spacing: 1px;
+      font-size: 1.6rem;
+      line-height: 2.8rem;
+    }
+    .button-container {
+      padding: 3rem 0;
+      text-align: center;
+    }
+
+    &-container {
+      display: flex;
+      flex-wrap: wrap;
+      padding-top: 2rem;
+
+      a {
+        flex-grow: 1;
+        width: 33%;
+        transition: all .3s ease;
+        padding: 2rem 5rem;
+
+        img {
+          width: 100%;
+        }
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    .button--3 {
+      text-transform: none;
+      font-weight: 400;
+    }
+  }
+
+  // AUDIO and E-BOOK SECTION
+  .audio-book,
+  .e-book {
+    padding: 5rem 0;
+    font-size: 1.8rem;
+
+    .content-container {
+      max-width: 120rem;
+    }
+
+    h3 {
+      @include optimus;
+      font-size: 3.2rem;
+    }
+
+    .left-column {
+      p {
+        margin: 2rem 0;
+      }
+      ul {
+        padding-left: 2rem;
+      }
+      a,
+      a:link {
+        text-decoration: none;
+        color: #006666;
+        font-weight: 700;
+        display: inline-block;
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 0;
+          background-color: #006666;
+          left: 0;
+          bottom: 0;
+          opacity: 0;
+          transition: all .3s ease;
+        }
+
+        &:hover::before {
+          height: 3px;
+          transform: translateY(-3px);
+          opacity: 0.4;
+        }
+      }
+    }
+
+    .right-column {
+      text-align: right;
+      img.audio {
+        max-width: 400px;
+        box-shadow: 0px 2px 18px 0px rgba(0,0,0,0.3);
+      }
+      img.ebook {
+        max-width: 600px;
+      }
+    }
+  }
+
+  // SOCIAL SECTION
+  .social {
+    max-width: 120rem;
+    margin: 0 auto;
+    text-align: center;
+    padding: 5rem 0;
+
+    h4 {
+      @include optimus;
+      font-size: 3.2rem;
+      font-weight: 400;
+      padding: 5rem 0;
+    }
+  }
+}

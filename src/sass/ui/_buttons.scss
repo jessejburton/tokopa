@@ -30,7 +30,7 @@ a.read-more-btn:hover {
   padding-right: 1rem;
 }
 
-.arrow:hover a, a.read-more-btn:hover {
+a.read-more-btn:hover {
   transform: translateX(-.2rem);
 
   .elementor-button-text {
@@ -60,7 +60,6 @@ a.read-more-btn:hover {
 
 button.arrow--button {
   padding: 1.5rem 2rem;
-  @include optimus;
   font-size: 21px;
   font-weight: bold;
   color: #151511;

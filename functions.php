@@ -112,6 +112,16 @@ function register_theme_js() {
 
   wp_register_script('theme_javascript', get_template_directory_uri() . '/js/main.js', array(), '1.0', true);
 
+  /* LOCALIZATION for JS variables */
+  global $wp;
+  $url = add_query_arg( $wp->query_vars );
+
+  wp_localize_script( 'theme_javascript', 'wp_variables',
+    array(
+      'url' => $url
+    )
+  );
+
   // Enqueue
   wp_enqueue_script('TweenMax');
   wp_enqueue_script('TimeLine');
@@ -123,6 +133,21 @@ function register_theme_js() {
 
 }
 add_action( 'init', 'register_theme_js' );
+
+add_filter( 'template_include', 'var_template_include', 1000 );
+function var_template_include( $t ){
+    $GLOBALS['current_theme_template'] = basename($t);
+    return $t;
+}
+
+function get_current_template( $echo = false ) {
+    if( !isset( $GLOBALS['current_theme_template'] ) )
+        return false;
+    if( $echo )
+        echo $GLOBALS['current_theme_template'];
+    else
+        return $GLOBALS['current_theme_template'];
+}
 
 // CSS
 function register_theme_css() {

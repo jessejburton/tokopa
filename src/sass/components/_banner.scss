@@ -8,6 +8,49 @@
   background: url('../images/home--banner.jpg') no-repeat;
   background-size: cover;
   position: relative;
+  background-position: center right;
+}
+
+.banner--book {
+  height: 90vh;
+  background: url('../images/book-header.jpg') no-repeat;
+  background-size: cover!important;
+  position: relative;
+  background-position: bottom center;
+  display: flex;
+  justify-content: center;
+
+  .banner__content {
+    margin-top: 8rem;
+    max-width: 1100px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .banner__top {
+    display: flex;
+  }
+
+  .banner__book img {
+    max-width: 250px;
+  }
+  .banner__text img {
+    max-width: 600px;
+  }
+
+  .banner__bottom {
+    text-align: center;
+
+    h1 {
+      @include optimus;
+      max-width: 21em;
+      margin: 3rem auto;
+      font-size: 2.9rem;
+      line-height: 3.2rem;
+    }
+  }
 }
 
 .banner__logo {
@@ -17,6 +60,11 @@
   top: 0;
   transform: translate(50px, 100px);
   opacity: 1;
+
+  @include below(700px){
+    width: 80%;
+    top: 40%;
+  }
 }
 
 /* OLD */

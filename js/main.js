@@ -11,19 +11,35 @@ function init() {
   // Global
   showPage();
 
-  // Home Animations
+  /* Page Animations */
+  if (wp_variables.url === "/") homePage();
+  if (wp_variables.url === "/belonging-book/") belongingPage();
+
+}
+
+function homePage() {
   homeBannerAnimation();
   homeSignUpAnimation();
   homeBelongingAnimation();
   homeBlogAnimation();
   homeRetreatAnimation();
+  getPromos();
+  getQuotes();
+}
 
+function belongingPage() {
+  console.log("Belonging")
+  getQuotes();
 }
 
 function homeBannerAnimation() {
-  TweenMax.from(".banner--home", 1, { opacity: 0, ease: Power2.easeOut });
-  TweenMax.from(".banner__logo", 1.8, { scale: .9, y: 110, opacity: 0, ease: Power2.easeOut, delay: 0.5 });
-  TweenMax.from(".header__menu-container", 1, { y: -50, opacity: 0, ease: Power2.easeOut, delay: 1 });
+  if (window.innerWidth > 700) {
+    TweenMax.from(".banner--home", 1, { opacity: 0, ease: Power2.easeOut });
+    TweenMax.from(".banner__logo", 1.8, { scale: .9, y: 110, opacity: 0, ease: Power2.easeOut, delay: 0.5 });
+    TweenMax.from(".header__menu-container", 1, { y: -50, opacity: 0, ease: Power2.easeOut, delay: 1 });
+  } else {
+    TweenMax.from(".banner__logo", 1.8, { scale: .9, opacity: 0, ease: Power2.easeOut, delay: 0.5 });
+  }
 }
 
 function homeSignUpAnimation() {
@@ -170,7 +186,7 @@ function showPrevQuote() {
 }
 
 function quotesAutoSlide() {
-  if (!document.querySelector(".quotes:hover")) {
+  if (window.innerWidth > 600 && !document.querySelector(".quotes:hover")) {
     showNextQuote();
   }
 }
@@ -186,7 +202,6 @@ function showPage() {
 }
 
 /* GET DATA FROM API */
-
 function getQuotes() {
   const request = async () => {
     const quotes = await getPosts({ post_type: "quotes" });
@@ -218,7 +233,6 @@ function displayQuotes(quotes) {
   showNextQuote();
   quoteInterval = setInterval(quotesAutoSlide, 5000);
 }
-getQuotes();
 
 function getPromos() {
   const request = async () => {
@@ -261,7 +275,6 @@ function displayPromos(promos) {
   // Add the scroll animation for the promos
   homePromoAnimation();
 }
-getPromos();
 
 function getPosts({ post_type }) {
   return new Promise((resolve, reject) => {

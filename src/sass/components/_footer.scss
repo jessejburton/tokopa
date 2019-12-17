@@ -38,6 +38,10 @@
   padding-top: 8rem;
   text-shadow: 2px 2px 2px #1F6E54;
 
+  @include below(491px){
+    text-align: center;
+  }
+
   h6 {
     font-size: 3.4rem;
     @include akadora;

@@ -11,6 +11,11 @@
 }
 
 @font-face {
+  font-family: "Andada";
+  src: url("fonts/Andada-Italic.woff") format("woff")
+}
+
+@font-face {
   font-family: "Elegant Icons";
   src: url("fonts/ElegantIcons.woff2") format("woff2"),
        url("fonts/ElegantIcons.woff") format("woff");
@@ -39,8 +44,10 @@
 @import './components/posts';
 @import './components/sidebar';
 @import './components/product';
+@import './components/quotes';
 
 @import './pages/home';
+@import './pages/book';
 
 @import './ui/activecampaign';
 @import './ui/buttons';

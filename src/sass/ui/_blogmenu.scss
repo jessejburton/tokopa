@@ -21,10 +21,6 @@
         opacity: 1;
       }
 
-      &::after {
-        animation: bounce .3s ease;
-      }
-
       @keyframes bounce {
         0% {
           transform: translate(1rem, -0.2rem) scale(1);

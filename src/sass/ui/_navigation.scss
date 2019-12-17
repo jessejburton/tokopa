@@ -201,6 +201,7 @@
 
   @include below($menu-breakpoint){
     opacity: 1;
+    pointer-events: all;
   }
 
   // Hamburger Menu Toggle
@@ -243,7 +244,7 @@
 }
 
 .header__menu-container.menu-open {
-  opacity: 1;
+  opacity: 1!important;
   height: 100vh;
 
   & ul li a {
@@ -251,5 +252,9 @@
     opacity: 1;
   }
 
+  .sub-menu li {
+    height: auto;
+    overflow: visible;
+  }
 }
 
